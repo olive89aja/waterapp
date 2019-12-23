@@ -14,10 +14,6 @@ app.use(
   })
 );
 
-app.use(express.static(process.cwd() + "/public"));
-//Require set up handlebars
-
-
 //connecting to MongoDB
 //mongoose.connect("mongodb://localhost/scraped_news");
 const MONGODB_URI =
@@ -34,6 +30,8 @@ var routes = require("./server/routes/index.js");
 app.use("/", routes);
 //Create localhost port
 var port = process.env.PORT || 3000;
+
 app.listen(port, function() {
   console.log("Listening on PORT " + port);
 });
+
