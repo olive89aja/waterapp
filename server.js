@@ -34,6 +34,7 @@
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 var logger = require("morgan");
+var path = require('path');
 
 //initialize Express app
 var express = require("express");
@@ -45,7 +46,7 @@ app.use(
     extended: false
   })
 );
-
+app.use(express.static(path.join(__dirname, 'client/build')));
 //connecting to MongoDB
 //mongoose.connect("mongodb://localhost/scraped_news");
 const MONGODB_URI =
@@ -58,8 +59,7 @@ db.once("open", function() {
   console.log("Connected to Mongoose!");
 });
 
-var routes = require("./server/routes/index.js");
-app.use("/", routes);
+
 //Create localhost port
 var port = process.env.PORT || 3000;
 
