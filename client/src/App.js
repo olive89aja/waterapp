@@ -1,28 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import About from "./components/About/About.js";
+import Main from "./components/Main/Main.js";
+import Nav from "./components/Nav";
 
 function App() {
   return (
-   
-   <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          E <code>changed</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn
-        </a>
-      </header>
-    </div>
-    
-
+    <Router>
+      <div>
+        <Nav />
+        <Switch>
+          <Route exact path="/" component={Main} />
+          <Route exact path="/Main" component={Main} />
+          <Route exact path="/About" component={About} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 //
@@ -30,8 +24,7 @@ function App() {
 // export default class Glogin extends React.Component {
 //   render() {
 //     return (
-        
-       
+
 //     );
 //   }
 // }
