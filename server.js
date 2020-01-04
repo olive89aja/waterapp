@@ -29,11 +29,13 @@
 // });
 // module.exports=app;
 
-
 //dependencies
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
+
+//We are going to need a middleware at some point
 var logger = require("morgan");
+//This allows us to extract a file name from the file path
 var path = require('path');
 
 //initialize Express app
