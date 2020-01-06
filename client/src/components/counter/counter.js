@@ -1,9 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-
 
 const counterStyle = {
-  /* styles skipped for brevity */
+backgroundColor: "yellow",
+color:'blue',
+size:'large'
+};
+
+const buttonStyle = {
+backgroundColor: "light-blue",
+color:'blue',
+fontSize: 'large',
+width:'200px',
+height:'200px'
 };
 
 class Counter extends React.Component {
@@ -15,32 +23,37 @@ class Counter extends React.Component {
     value: Number(this.props.initialvalue),
   };
 
+  restartCounter() {
+    this.setState({ value: [] });
+  }
+
   handleIncrement = () => {
     this.setState(state => {
       return {
-        value: state.value + 1,
+        value: parseInt(state.value + 1),
       };
+
     });
   };
-  // handleDecrement = () => {
-  //   this.setState(state => {
-  //     return {
-  //       value: state.value - 1,
-  //     }
-  //   })
-  // }
 
   render() {
-    return (
-      <span style={counterStyle}>
+    return <>
+       <span style={counterStyle}>
         <strong style={{ flex: `1` }}>{this.state.value}</strong>
-        {/* <button onClick={this.handleDecrement}>Decrement</button> */}
-        <button id="Clicks" onClick={this.handleIncrement}>
-          I drank 17oz
-        </button>
-        {/* <button disabled={!this.state.value}>You drank enough</button> */}
-      </span>
-    );
+        </span>
+        <div>
+            <button id="Clicks" onClick={this.handleIncrement} style={buttonStyle}> 
+          I drank 8oz
+        </button></div>
+        <button type="button" onClick={ this.restartCounter.bind(this) }>
+  <span>Initialize the counter</span>
+</button>
+      
+        <br></br><br></br>
+       {('8 clicks or more? Good job! Your body is well hydrated')}
+
+        </>
+    
   }
 }
 
