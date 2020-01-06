@@ -26,20 +26,28 @@ class Counter extends React.Component {
   restartCounter() {
     this.setState({ value: [] });
   }
+ 
 
   handleIncrement = () => {
     this.setState(state => {
       return {
         value: parseInt(state.value + 1),
+              
       };
 
     });
+
+    
   };
 
   render() {
+
+    localStorage.setItem('Clicks', this.state.value);
+    
     return <>
        <span style={counterStyle}>
-        <strong style={{ flex: `1` }}>{this.state.value}</strong>
+        <strong id='counting'>{this.state.value}</strong>
+        
         </span>
         <div>
             <button id="Clicks" onClick={this.handleIncrement} style={buttonStyle}> 
@@ -56,5 +64,8 @@ class Counter extends React.Component {
     
   }
 }
+
+
+
 
 export default Counter;
