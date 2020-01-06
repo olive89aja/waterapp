@@ -7,4 +7,14 @@ router.get('/', function(req, res, next) {
 });
 
 
+let Post = require('./../models/post');
+
+router.get('/', (req, res, next) => {
+    Post.find().exec((err, posts) => {
+        res.render('index', { posts: posts });
+    });
+
+});
+
+
 module.exports = router;

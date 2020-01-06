@@ -26,28 +26,38 @@ class Counter extends React.Component {
   restartCounter() {
     this.setState({ value: [] });
   }
+ 
 
   handleIncrement = () => {
     this.setState(state => {
       return {
         value: parseInt(state.value + 1),
+              
       };
 
     });
+
+    
   };
 
   render() {
+
+    localStorage.setItem('Clicks', this.state.value);
+    localStorage.setItem('username',"Olivier");
+
     return <>
        <span style={counterStyle}>
-        <strong style={{ flex: `1` }}>{this.state.value}</strong>
+        <strong>{this.state.value}</strong>
+        
         </span>
         <div>
+
             <button id="Clicks" onClick={this.handleIncrement} style={buttonStyle}> 
           I drank 8oz
         </button></div>
         <button type="button" onClick={ this.restartCounter.bind(this) }>
-  <span>Initialize the counter</span>
-</button>
+        <span>Initialize the counter</span>
+        </button>
       
         <br></br><br></br>
        {('8 clicks or more? Good job! Your body is well hydrated')}
@@ -57,4 +67,7 @@ class Counter extends React.Component {
   }
 }
 
+
 export default Counter;
+
+

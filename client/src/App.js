@@ -21,13 +21,5 @@ function App() {
     </Router>
   );
 }
-//
-//Add components animation, box, google login, counter, gallery
-// export default class Glogin extends React.Component {
-//   render() {
-//     return (
 
-//     );
-//   }
-// }
 export default App;
