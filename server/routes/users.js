@@ -1,20 +1,33 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const Post = require('./../../models/post');
+const booksController = require("../../controllers/userscontroller");
+
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
+// router.post('/counter', (req, res, next) => {
+//     Post.find().then((err, posts) => {
+//         if (err) console.log(`ERROR ${err}`);
+//         // res.render('counter', { posts: posts });
 
-let Post = require('./../models/post');
+//         console.log(posts);
+//         res.send("DB")
+//     });
 
-router.get('/', (req, res, next) => {
-    Post.find().exec((err, posts) => {
-        res.render('index', { posts: posts });
-    });
+// });
 
-});
+// router
+//   .route("/counter")
+//   .get(userscontroller.findone)
 
+
+
+// router.post('/', function (req, res) {
+//   res.send('POST request to the homepage')
+// });
 
 module.exports = router;

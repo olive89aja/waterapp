@@ -9,6 +9,11 @@ const divStyle = {
 }
 
 class Main extends React.Component {
+
+  componentDidMount() {
+    //axios or http call to '/' route in server to get user data
+    //Save user data in state and pass it down to props or as data to elements as needed
+  }
   render() {
     
     return <><br></br>

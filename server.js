@@ -8,6 +8,7 @@ var mongoose = require("mongoose");
 var logger = require("morgan");
 //This allows us to extract a file name from the file path
 var path = require('path');
+const routes = require('./server/routes/index')
 
 //initialize Express app
 var express = require("express");
@@ -20,9 +21,13 @@ app.use(
   })
 );
 
+
+
 app.use(express.static(path.join(__dirname, 'client/build')));
 //connecting to MongoDB
 //mongoose.connect("mongodb://localhost/scraped_news");
+app.use(express.json());
+
 const MONGODB_URI =
   process.env.MONGODB_URI || "mongodb://localhost/mongoscrap";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
@@ -36,6 +41,8 @@ db.once("open", function() {
 
 //Create localhost port
 var port = process.env.PORT || 3001;
+
+app.use('/api', routes);
 
 app.listen(port, function() {
   console.log("Listening on PORT " + port);

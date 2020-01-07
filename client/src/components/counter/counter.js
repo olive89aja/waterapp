@@ -1,4 +1,7 @@
 import React from 'react';
+import Axios from 'axios';
+
+
 
 const counterStyle = {
 backgroundColor: "yellow",
@@ -35,7 +38,9 @@ class Counter extends React.Component {
               
       };
 
-    });
+    },res =>{
+      Axios.post("/api/counter", {clicks:this.state.value}).then(data => console.log(data));
+    })
 
     
   };

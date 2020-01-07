@@ -7,3 +7,5 @@ let mongoose = require('mongoose');
     });
 
     module.exports = Post;
+
+    
