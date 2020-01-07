@@ -12,8 +12,8 @@ router.post('/counter', (req, res, next) => {
         if (err) console.log(`ERROR ${err}`);
         // res.render('counter', { posts: posts });
 
-        console.log(res);
-        res.send("all good")
+        console.log(req.body);
+        res.send("DB")
     });
 
 });

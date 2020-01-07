@@ -20,11 +20,14 @@ app.use(
     extended: false
   })
 );
-app.use('/api', routes);
+
+
 
 app.use(express.static(path.join(__dirname, 'client/build')));
 //connecting to MongoDB
 //mongoose.connect("mongodb://localhost/scraped_news");
+app.use(express.json());
+
 const MONGODB_URI =
   process.env.MONGODB_URI || "mongodb://localhost/mongoscrap";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
@@ -38,6 +41,8 @@ db.once("open", function() {
 
 //Create localhost port
 var port = process.env.PORT || 3001;
+
+app.use('/api', routes);
 
 app.listen(port, function() {
   console.log("Listening on PORT " + port);
