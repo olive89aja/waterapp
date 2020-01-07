@@ -8,6 +8,7 @@ var mongoose = require("mongoose");
 var logger = require("morgan");
 //This allows us to extract a file name from the file path
 var path = require('path');
+const routes = require('./server/routes/index')
 
 //initialize Express app
 var express = require("express");
@@ -19,6 +20,7 @@ app.use(
     extended: false
   })
 );
+app.use('/api', routes);
 
 app.use(express.static(path.join(__dirname, 'client/build')));
 //connecting to MongoDB
