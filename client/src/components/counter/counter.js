@@ -42,7 +42,6 @@ class Counter extends React.Component {
       Axios.post("/api/counter", {clicks:this.state.value}).then(data => console.log(data));
     })
 
-    
   };
 
   render() {

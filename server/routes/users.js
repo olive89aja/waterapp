@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Post = require('./../../models/post');
+const Post = require('../../models/clicks');
 const booksController = require("../../controllers/userscontroller");
 
 
@@ -8,21 +8,6 @@ const booksController = require("../../controllers/userscontroller");
 router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
-
-// router.post('/counter', (req, res, next) => {
-//     Post.find().then((err, posts) => {
-//         if (err) console.log(`ERROR ${err}`);
-//         // res.render('counter', { posts: posts });
-
-//         console.log(posts);
-//         res.send("DB")
-//     });
-
-// });
-
-// router
-//   .route("/counter")
-//   .get(userscontroller.findone)
 
 
 

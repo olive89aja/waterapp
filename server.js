@@ -1,5 +1,4 @@
 
-
 //dependencies
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
@@ -21,15 +20,13 @@ app.use(
   })
 );
 
-
-
 app.use(express.static(path.join(__dirname, 'client/build')));
 //connecting to MongoDB
 //mongoose.connect("mongodb://localhost/scraped_news");
 app.use(express.json());
 
 const MONGODB_URI =
-  process.env.MONGODB_URI || "mongodb://localhost/mongoscrap";
+  process.env.MONGODB_URI || "mongodb://localhost/waterapp";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 var db = mongoose.connection;
@@ -47,10 +44,6 @@ app.use('/api', routes);
 app.listen(port, function() {
   console.log("Listening on PORT " + port);
 });
-
-
-
-
 
 
 
