@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Post = require('./../../models/post');
+const Clicks = require('../../models/clicks');
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
@@ -8,10 +8,9 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/counter', (req, res, next) => {
-    Post.find().exec((err, posts) => {
+    Clicks.find().exec((err, Clicks) => {
         if (err) console.log(`ERROR ${err}`);
-        // res.render('counter', { posts: posts });
-
+     
         console.log(req.body);
         res.send("DB")
     });
@@ -21,8 +20,12 @@ router.post('/counter', (req, res, next) => {
 // router.post('/', function (req, res) {
 //   res.send('POST request to the homepage')
 // });
+// const post = new Post({
+//   _id:new mongoose.Types.ObjectId(),
+//   clicks: req.body,
+// })
 
-module.exports = router;
+
 
 
 module.exports = router;
