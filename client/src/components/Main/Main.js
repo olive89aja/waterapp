@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import GoogleLogin from "react-google-login";
-import GoogleLogout from "react-google-login";
+import {GoogleLogout} from "react-google-login";
 
 const divStyle = {
     color: 'white',
@@ -43,7 +43,7 @@ class Main extends React.Component {
         <button onClick={renderProps.onClick}>Log out</button>
       )}
       buttonText="Logout"
-      onLogoutSuccess={logout}
+       onLogoutSuccess={responseGoogle}
     ></GoogleLogout> 
 
     <div style={divStyle}>
