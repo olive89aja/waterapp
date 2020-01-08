@@ -22,7 +22,7 @@ app.use(
 
 app.use(express.static(path.join(__dirname, 'client/build')));
 //connecting to MongoDB
-//mongoose.connect("mongodb://localhost/scraped_news");
+
 app.use(express.json());
 
 const MONGODB_URI =
@@ -45,8 +45,16 @@ app.listen(port, function() {
   console.log("Listening on PORT " + port);
 });
 
-
-
+app.get('/counter', (req, res, next) => {
+  db.Clicks.find({ _id: req.params.id })
+    .populate("click")
+  .then((dbClicks) => {
+    res.json(dbClicks);
+  })
+  .catch((err) => {
+    res.json(err);
+  })
+});
 
 
 

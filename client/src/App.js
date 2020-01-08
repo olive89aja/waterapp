@@ -5,6 +5,7 @@ import About from "./components/About/About.js";
 import Main from "./components/Main/Main.js";
 import Counter from "./components/counter/counter";
 import Nav from "./components/Nav";
+import GoogleLogin from "react-google-login";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/Main" component={Main} />
           <Route exact path="/About" component={About} />
           <Route exact path="/Counter" component={Counter} />
+          <Route exact path="/Glogin" component={GoogleLogin} />
         </Switch>
       </div>
     </Router>
