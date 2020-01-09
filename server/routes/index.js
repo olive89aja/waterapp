@@ -18,33 +18,8 @@ router.post('/counter', (req, res, next) => {
 
     console.log(result);
   })
-    // Clicks.findOne({ name: 'Olivier' }, function(err, doc) {
-    //     if (err) console.log(`ERROR ${err}`);
-    //     console.log(doc);
-    //     doc.name = 'Olivier';
-    //     doc.visits.$inc();
-    //       doc.save();
-    //     console.log(req.body);
-    //     res.send("DB")
-    // });
+ 
 });
-
-
-
-
-
-
-// router.post('/counter', (req, res, next) => {
-//   var query = {author: "Olivier"};
-//   var update = {$inc: { Clicks: 1}, author: "Olivier"};
-//   var options = {upsert: true, new: true};
-  
-//   Clicks.findByIdAndUpdate(query, update, options, function(error, result) {
-//     if(error) console.log(error);
-
-//     console.log(result);
-//   })
-
 
 
 module.exports = router;
