@@ -7,11 +7,15 @@ var mongoose = require("mongoose");
 var logger = require("morgan");
 //This allows us to extract a file name from the file path
 var path = require('path');
-const routes = require('./server/routes/index')
+const routes = require('./server/routes/index');
+
+const Clicks = require('./models/clicks');
 
 //initialize Express app
 var express = require("express");
 var app = express();
+
+
 
 app.use(logger("dev"));
 app.use(
@@ -36,6 +40,15 @@ db.once("open", function() {
 });
 
 
+app.get('/counter', (req, res) => {
+
+  db.collection('clicks').find().toArray((err, result) => {
+    if (err) return console.log(err);
+    res.send(result);
+  });
+});
+
+
 //Create localhost port
 var port = process.env.PORT || 3001;
 
@@ -44,21 +57,4 @@ app.use('/api', routes);
 app.listen(port, function() {
   console.log("Listening on PORT " + port);
 });
-
-app.get('/counter', (req, res, next) => {
-  db.Clicks.find({ _id: req.params.id })
-    .populate("click")
-  .then((dbClicks) => {
-    res.json(dbClicks);
-  })
-  .catch((err) => {
-    res.json(err);
-  })
-});
-
-
-
-
-
-
 

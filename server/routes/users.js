@@ -1,15 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const Post = require('../../models/clicks');
-const booksController = require("../../controllers/userscontroller");
-
+const clicks = require('../../models/clicks');
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/users', function(req, res, next) {
   res.send('respond with a resource');
 });
-
-
 
 // router.post('/', function (req, res) {
 //   res.send('POST request to the homepage')
