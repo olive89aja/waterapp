@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 
     var ClicksSchema = new Schema({
         posted_at: Date,
-        Clicks: Number,
+        Clicks: {Number, default:0},
         author: String
     });
 

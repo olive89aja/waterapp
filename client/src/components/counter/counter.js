@@ -47,7 +47,7 @@ class Counter extends React.Component {
   render() {
 
     localStorage.setItem('Clicks', this.state.value);
-    localStorage.setItem('username',"Olivier");
+    
 
     return <>
        <span style={counterStyle}>
