@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import GoogleLogin from "react-google-login";
 import {GoogleLogout} from "react-google-login";
+import Counter from "../counter/counter";
 
 const divStyle = {
     color: 'white',
@@ -52,7 +53,7 @@ class Main extends React.Component {
        onLogoutSuccess={responseGoogle}
     ></GoogleLogout> 
   
-  
+  <Counter></Counter>
   <div style={divStyle}>
 <a href = "http://localhost:3000/Counter" target="blank">Welcome {localStorage.getItem('username')}.Check your water intake</a><br></br><br></br>
 </div>
