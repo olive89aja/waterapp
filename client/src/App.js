@@ -3,9 +3,8 @@ import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import About from "./components/About/About.js";
 import Main from "./components/Main/Main.js";
-import Counter from "./components/counter/counter";
 import Nav from "./components/Nav";
-import GoogleLogin from "react-google-login";
+
 
 function App() {
   return (

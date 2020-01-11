@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import GoogleLogin from "react-google-login";
 import {GoogleLogout} from "react-google-login";
 import Counter from "../counter/counter";
@@ -12,8 +12,6 @@ const divStyle = {
 }
 
 
-
-
 class Main extends React.Component {
 
   componentDidMount() {
@@ -24,8 +22,8 @@ class Main extends React.Component {
   }
   render() {
     const responseGoogle = (response) => {
-      localStorage.setItem('username', response.profileObj.name);
-      
+      // localStorage.setItem('username', response.profileObj.name);
+      console.log(responseGoogle)
       }
     
     return <>
@@ -55,18 +53,15 @@ class Main extends React.Component {
   
   <Counter></Counter>
   <div style={divStyle}>
-<a href = "http://localhost:3000/Counter" target="blank">Welcome {localStorage.getItem('username')}.Check your water intake</a><br></br><br></br>
-</div>
-    
+
+  
     <img src={process.env.PUBLIC_URL + "/water1.jpg"} alt={"water"} className="img-responsive" height="200px" width="200px"/><br></br>
     <img src={process.env.PUBLIC_URL + "/water2.jpg"} alt={"water"} className="img-responsive" height="200px" width="200px"/><br></br>
     <img src={process.env.PUBLIC_URL + "/water3.jpg"} alt={"water"} className="img-responsive" height="200px" width="200px"/><br></br>
- 
+    </div>
       
   </>
   }
 }
-
-
 
 export default Main;
