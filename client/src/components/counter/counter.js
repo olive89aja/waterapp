@@ -26,7 +26,23 @@ const buttonStyle = {
   border: "deepskyblue",
   outline: "none"
 };
-
+const restartStyle = {
+  borderRadius: "50% 50% 50% 50%",
+  position: "absolute",
+  top: "70%",
+  left: "48%",
+  color: "deepskyblue",
+  background: "blue",
+  border: "3px blue",
+  marginTop: "20px",
+  width: "70px",
+  height: "70px",
+  outline: "none"
+};
+const restartText = {
+  // transform: "rotate(30deg)"
+  color: "white"
+};
 class Counter extends React.Component {
   static defaultProps = {
     initialvalue: 0
@@ -75,8 +91,12 @@ class Counter extends React.Component {
             </span>
           </button>
         </div>
-        <button type="button" onClick={this.restartCounter.bind(this)}>
-          <span>Initialize the counter</span>
+        <button
+          type="button"
+          onClick={this.restartCounter.bind(this)}
+          style={restartStyle}
+        >
+          <span style={restartText}>Restart</span>
         </button>
 
         <br></br>
