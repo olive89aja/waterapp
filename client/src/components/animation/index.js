@@ -1,25 +1,15 @@
-import React from 'react';
+import React from "react";
 
-import './index.css';
-
-
+import "./index.css";
 
 const Animation = data => (
-
-  <body>
-
+  <div>
     <h1>Hydrate</h1>
 
     <div className="drop-container">
-
       <div className="drop"></div>
-
     </div>
-
-  </body>
-
+  </div>
 );
-
-
 
 export default Animation;
