@@ -2,17 +2,29 @@ import React from "react";
 import Axios from "axios";
 
 const counterStyle = {
-  backgroundColor: "yellow",
-  color: "blue",
-  size: "large"
+  color: "white",
+  size: "xx-large",
+  position: "absolute",
+  top: "60%",
+  left: "0%",
+  width: "100%",
+  height: "20%",
+  borderRadius: "100% 100% 100% 100%"
+  // margin: 0px;
 };
 
 const buttonStyle = {
-  backgroundColor: "light-blue",
-  color: "blue",
-  fontSize: "large",
-  width: "200px",
-  height: "200px"
+  position: "absolute",
+  border: "0%",
+  top: "39%",
+  left: "45%",
+  width: "10%",
+  height: "17%",
+  borderRadius: "100% 100% 100% 100%",
+  margin: "1px",
+  background: "deepskyblue",
+  border: "deepskyblue",
+  outline: "none"
 };
 
 class Counter extends React.Component {
@@ -48,16 +60,19 @@ class Counter extends React.Component {
 
     return (
       <>
-        <span style={counterStyle}>
+        {/* <span style={counterStyle}>
           <strong>{this.state.value}</strong>
-        </span>
+        </span> */}
+
         <div>
           <button
             id="Clicks"
             onClick={this.handleIncrement}
             style={buttonStyle}
           >
-            I drank 8oz
+            <span style={counterStyle}>
+              <strong>{this.state.value}</strong>
+            </span>
           </button>
         </div>
         <button type="button" onClick={this.restartCounter.bind(this)}>
