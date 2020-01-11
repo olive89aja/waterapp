@@ -22,7 +22,7 @@ class Main extends React.Component {
   }
   render() {
     const responseGoogle = response => {
-      // localStorage.setItem("username", response.profileObj.name);
+      localStorage.setItem("username", response.profileObj.name);
       console.log(response);
     };
 
