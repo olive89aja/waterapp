@@ -2,6 +2,7 @@ import React from "react";
 import GoogleLogin from "react-google-login";
 import { GoogleLogout } from "react-google-login";
 import Counter from "../counter/counter";
+import Axios from "axios";
 
 const divStyle = {
   color: "white",
@@ -16,6 +17,8 @@ class Main extends React.Component {
     //axios or http call to '/' route in server to get user data
     //Save user data in state and pass it down to props or as data to elements as needed
     // const [name, setName]=useState("");
+    //Axios.post("/", {clicks: localStorage.getItem("clicks"), author:localStorage.getItem("response.profileObj.name")}).then(data => console.log(data));
+
   }
   render() {
     const responseGoogle = response => {

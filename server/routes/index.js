@@ -17,8 +17,21 @@ router.post('/counter', (req, res, next) => {
 
     console.log(result);
   })
- 
 });
 
+router.post('/nick', (req, res, next) => {
+  console.log("this got hit",req.body);
+  let {author, clicks}=req.body
+  var query = {author};
+  var update = {clicks};
+  var options = {upsert: true, new: true};
+  
+  Clicks.findOneAndUpdate(query, update, options, function(error, result) {
+    if(error) console.log(error);
 
+    res.json({result});
+
+})
+})
+ 
 module.exports = router;
