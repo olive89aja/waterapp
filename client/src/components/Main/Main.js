@@ -19,13 +19,14 @@ class Main extends React.Component {
   }
   render() {
     const responseGoogle = response => {
-      localStorage.setItem("username", response.profileObj.name);
+      // localStorage.setItem("username", response.profileObj.name);
+      console.log(response);
     };
 
     return (
       <>
         <GoogleLogin
-          clientId="1041063470172-h5bppvahvqi8827mmcnrbo5u9di5k8hf.apps.googleusercontent.com"
+          clientId="1041063470172-6gmdhalej085etcuqvfqic9mprf5veuq.apps.googleusercontent.com"
           render={renderProps => (
             <button
               onClick={renderProps.onClick}
@@ -41,7 +42,7 @@ class Main extends React.Component {
         />
 
         <GoogleLogout
-          clientId="1041063470172-h5bppvahvqi8827mmcnrbo5u9di5k8hf.apps.googleusercontent.com"
+          clientId="1041063470172-6gmdhalej085etcuqvfqic9mprf5veuq.apps.googleusercontent.com"
           render={renderProps => (
             <button onClick={renderProps.onClick}>Log out</button>
           )}
