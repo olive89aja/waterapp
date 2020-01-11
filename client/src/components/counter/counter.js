@@ -1,7 +1,5 @@
-import React from 'react';
-import Axios from 'axios';
-
-
+import React from "react";
+import Axios from "axios";
 
 const counterStyle = {
   backgroundColor: "yellow",
@@ -31,26 +29,27 @@ class Counter extends React.Component {
   }
 
   handleIncrement = () => {
-    this.setState(state => {
-      return {
-        value: parseInt(state.value + 1)
-      };
-
-    },res =>{
-      Axios.post("/api/counter", {clicks:this.state.value}).then(data => console.log(data));
-    })
-
+    this.setState(
+      state => {
+        return {
+          value: parseInt(state.value + 1)
+        };
+      },
+      res => {
+        Axios.post("/api/counter", { clicks: this.state.value }).then(data =>
+          console.log(data)
+        );
+      }
+    );
   };
 
   render() {
+    localStorage.setItem("Clicks", this.state.value);
 
-    localStorage.setItem('Clicks', this.state.value);
-    
-
-    return <>
-       <span style={counterStyle}>
-        <strong>{this.state.value}</strong>
-        
+    return (
+      <>
+        <span style={counterStyle}>
+          <strong>{this.state.value}</strong>
         </span>
         <div>
           <button
