@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 import React from "react";
+=======
+import React, { useState } from "react";
+>>>>>>> 5d4b48db74553cdcc1e647be0a1bcf14f038e30b
 import GoogleLogin from "react-google-login";
-import {GoogleLogout} from "react-google-login";
+import { GoogleLogout } from "react-google-login";
 import Counter from "../counter/counter";
 
 const divStyle = {
+<<<<<<< HEAD
     color: 'white',
     background:'light-blue',
     width:'250px',
@@ -11,36 +16,43 @@ const divStyle = {
     fontSize:'50px'
 }
 
+=======
+  color: "white",
+  background: "light-blue",
+  width: "250px",
+  height: "250px",
+  fontSize: "50px"
+};
+>>>>>>> 5d4b48db74553cdcc1e647be0a1bcf14f038e30b
 
 class Main extends React.Component {
-
   componentDidMount() {
     //axios or http call to '/' route in server to get user data
     //Save user data in state and pass it down to props or as data to elements as needed
     // const [name, setName]=useState("");
- 
   }
   render() {
-    const responseGoogle = (response) => {
-      // localStorage.setItem('username', response.profileObj.name);
-      console.log(responseGoogle)
-      }
-    
-    return <>
-  
+    const responseGoogle = response => {
+      localStorage.setItem("username", response.profileObj.name);
+    };
 
-    <GoogleLogin
-      clientId="1041063470172-h5bppvahvqi8827mmcnrbo5u9di5k8hf.apps.googleusercontent.com"
-      render={renderProps => (
-        <button onClick={renderProps.onClick} disabled={renderProps.disabled}>
-          Log in
-        </button>
-      )}
-      buttonText="Login"
-      onSuccess={responseGoogle}
-      onFailure={responseGoogle}
-      cookiePolicy={'single_host_origin'}
-    />
+    return (
+      <>
+        <GoogleLogin
+          clientId="1041063470172-h5bppvahvqi8827mmcnrbo5u9di5k8hf.apps.googleusercontent.com"
+          render={renderProps => (
+            <button
+              onClick={renderProps.onClick}
+              disabled={renderProps.disabled}
+            >
+              Log in
+            </button>
+          )}
+          buttonText="Login"
+          onSuccess={responseGoogle}
+          onFailure={responseGoogle}
+          cookiePolicy={"single_host_origin"}
+        />
 
     <GoogleLogout
       clientId="1041063470172-h5bppvahvqi8827mmcnrbo5u9di5k8hf.apps.googleusercontent.com"
@@ -61,6 +73,7 @@ class Main extends React.Component {
     </div>
       
   </>
+    )
   }
 }
 

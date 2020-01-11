@@ -4,12 +4,12 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import About from "./components/About/About.js";
 import Main from "./components/Main/Main.js";
 import Nav from "./components/Nav";
-
-
-function App() {
+import Animation from "../src/components/animation/index";
+function App(props) {
   return (
     <Router>
       <div>
+        <Animation></Animation>
         <Nav />
         <Switch>
           <Route exact path="/" component={Main} />
