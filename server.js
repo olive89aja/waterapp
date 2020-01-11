@@ -1,5 +1,4 @@
 
-
 //dependencies
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
@@ -8,10 +7,15 @@ var mongoose = require("mongoose");
 var logger = require("morgan");
 //This allows us to extract a file name from the file path
 var path = require('path');
+const routes = require('./server/routes/index');
+
+const Clicks = require('./models/clicks');
 
 //initialize Express app
 var express = require("express");
 var app = express();
+
+
 
 app.use(logger("dev"));
 app.use(
@@ -22,9 +26,11 @@ app.use(
 
 app.use(express.static(path.join(__dirname, 'client/build')));
 //connecting to MongoDB
-//mongoose.connect("mongodb://localhost/scraped_news");
+
+app.use(express.json());
+
 const MONGODB_URI =
-  process.env.MONGODB_URI || "mongodb://localhost/mongoscrap";
+  process.env.MONGODB_URI || "mongodb://localhost/waterapp";
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 var db = mongoose.connection;
@@ -34,23 +40,21 @@ db.once("open", function() {
 });
 
 
+app.get('/counter', (req, res) => {
+
+  db.collection('clicks').find().toArray((err, result) => {
+    if (err) return console.log(err);
+    res.send(result);
+  });
+});
+
+
 //Create localhost port
 var port = process.env.PORT || 3001;
+
+app.use('/api', routes);
 
 app.listen(port, function() {
   console.log("Listening on PORT " + port);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
 

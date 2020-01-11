@@ -1,20 +1,14 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const clicks = require('../../models/clicks');
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/users', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-
-let Post = require('./../models/post');
-
-router.get('/', (req, res, next) => {
-    Post.find().exec((err, posts) => {
-        res.render('index', { posts: posts });
-    });
-
-});
-
+// router.post('/', function (req, res) {
+//   res.send('POST request to the homepage')
+// });
 
 module.exports = router;

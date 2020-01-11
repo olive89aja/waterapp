@@ -1,5 +1,7 @@
-import React from "react";
-import Animation from "../animation/index";
+import React from 'react';
+import Axios from 'axios';
+
+
 
 const counterStyle = {
   backgroundColor: "yellow",
@@ -33,18 +35,22 @@ class Counter extends React.Component {
       return {
         value: parseInt(state.value + 1)
       };
-    });
+
+    },res =>{
+      Axios.post("/api/counter", {clicks:this.state.value}).then(data => console.log(data));
+    })
+
   };
 
   render() {
-    localStorage.setItem("Clicks", this.state.value);
-    localStorage.setItem("username", "Olivier");
 
-    return (
-      <>
-        <Animation></Animation>
-        <span style={counterStyle}>
-          <strong>{this.state.value}</strong>
+    localStorage.setItem('Clicks', this.state.value);
+    
+
+    return <>
+       <span style={counterStyle}>
+        <strong>{this.state.value}</strong>
+        
         </span>
         <div>
           <button
