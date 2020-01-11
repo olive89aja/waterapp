@@ -1,29 +1,15 @@
-<<<<<<< HEAD
 import React from "react";
-=======
-import React, { useState } from "react";
->>>>>>> 5d4b48db74553cdcc1e647be0a1bcf14f038e30b
 import GoogleLogin from "react-google-login";
 import { GoogleLogout } from "react-google-login";
 import Counter from "../counter/counter";
 
 const divStyle = {
-<<<<<<< HEAD
-    color: 'white',
-    background:'light-blue',
-    width:'250px',
-    height:'250px',
-    fontSize:'50px'
-}
-
-=======
   color: "white",
   background: "light-blue",
   width: "250px",
   height: "250px",
   fontSize: "50px"
 };
->>>>>>> 5d4b48db74553cdcc1e647be0a1bcf14f038e30b
 
 class Main extends React.Component {
   componentDidMount() {
@@ -54,26 +40,44 @@ class Main extends React.Component {
           cookiePolicy={"single_host_origin"}
         />
 
-    <GoogleLogout
-      clientId="1041063470172-h5bppvahvqi8827mmcnrbo5u9di5k8hf.apps.googleusercontent.com"
-      render={renderProps => (
-        <button onClick={renderProps.onClick}>Log out</button>
-      )}
-      buttonText="Logout"
-       onLogoutSuccess={responseGoogle}
-    ></GoogleLogout> 
-  
-  <Counter></Counter>
-  <div style={divStyle}>
+        <GoogleLogout
+          clientId="1041063470172-h5bppvahvqi8827mmcnrbo5u9di5k8hf.apps.googleusercontent.com"
+          render={renderProps => (
+            <button onClick={renderProps.onClick}>Log out</button>
+          )}
+          buttonText="Logout"
+          onLogoutSuccess={responseGoogle}
+        ></GoogleLogout>
 
-  
-    <img src={process.env.PUBLIC_URL + "/water1.jpg"} alt={"water"} className="img-responsive" height="200px" width="200px"/><br></br>
-    <img src={process.env.PUBLIC_URL + "/water2.jpg"} alt={"water"} className="img-responsive" height="200px" width="200px"/><br></br>
-    <img src={process.env.PUBLIC_URL + "/water3.jpg"} alt={"water"} className="img-responsive" height="200px" width="200px"/><br></br>
-    </div>
-      
-  </>
-    )
+        <Counter></Counter>
+        <div style={divStyle}>
+          <img
+            src={process.env.PUBLIC_URL + "/water1.jpg"}
+            alt={"water"}
+            className="img-responsive"
+            height="200px"
+            width="200px"
+          />
+          <br></br>
+          <img
+            src={process.env.PUBLIC_URL + "/water2.jpg"}
+            alt={"water"}
+            className="img-responsive"
+            height="200px"
+            width="200px"
+          />
+          <br></br>
+          <img
+            src={process.env.PUBLIC_URL + "/water3.jpg"}
+            alt={"water"}
+            className="img-responsive"
+            height="200px"
+            width="200px"
+          />
+          <br></br>
+        </div>
+      </>
+    );
   }
 }
 
