@@ -1,8 +1,7 @@
 # water-app
 
-Swiftly
-Your Faveorite Fashion App
-Swiftly is an app you can look through different images of shirts, pants, skirts, dresses, and shoes to create an outfit.
+Hydrate 
+This app measures your daily water intake
 
 The Team
 Abdul Shaikh: Original idea. Front-end. Javascript, React CSS. 
