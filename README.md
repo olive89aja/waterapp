@@ -4,7 +4,7 @@
 This app measures your daily water intake
 
 ## The Team
-Abdul Shaikh: Original idea. Front-end. Javascript, React CSS. 
+Abdul Shaikh: Original idea. Front-end. Javascript, React CSS. <br>
 Olivier Auberger: Back end. Javascript, counter, authentication, MongoDB and MongoShell. 
 
 
@@ -22,10 +22,10 @@ Prerequesite: you need a Google account to login to this website.
 
 Our website: https://blooming-refuge-48832.herokuapp.com/
 
-Click on Login. Authenticate yourself through your Google Account. 
-Then click on the blue button at the center of the page. 
-Each click is equivalent to an 8oz glass of water. 
-Your data is stored in a real-time database on the Mongo servers. 
+Click on Login. Authenticate yourself through your Google Account. <br>
+Then click on the blue button at the center of the page. <br>
+Each click is equivalent to an 8oz glass of water. <br>
+Your data is stored in a real-time database on the Mongo servers. <br>
 
 ## Future Improvements
 In the next version of this app we would:
