@@ -41,7 +41,7 @@ div.drop {
 }
 
 h1 {
-  color: white;
+  color: rgb(255, 255, 255);
 
   position: absolute;
 
@@ -143,5 +143,12 @@ div.drop-container:after {
     top: -20%;
 
     opacity: 0;
+  }
+}
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
   }
 }
