@@ -11,7 +11,8 @@ const divStyle = {
 
 const button = {
   borderRadius: "100%",
-  color: "blue"
+  color: "blue",
+  marginLeft: "0%"
 };
 class Main extends React.Component {
   componentDidMount() {
@@ -37,8 +38,7 @@ class Main extends React.Component {
                 backgroundColor: "deepskyblue",
                 borderColor: "deepskyblue",
                 borderRadius: "10%",
-                left: "50%",
-                bottom: "50%"
+                marginLeft: "2%"
               }}
               onClick={renderProps.onClick}
               disabled={renderProps.disabled}
