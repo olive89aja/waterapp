@@ -9,12 +9,12 @@ Olivier Auberger: Back end. Javascript, counter, authentication, MongoDB and Mon
 
 
 ## Technologies
-NodeJs
-Express
-React
-MongoDB
-CSS
-React-Google-Login
+- NodeJs
+- Express
+- React
+- MongoDB
+- CSS
+- React-Google-Login
 
 ## How to Use
 
@@ -22,8 +22,8 @@ Prerequesite: you need a Google account to login to this website.
 
 Our website: https://blooming-refuge-48832.herokuapp.com/
 
-Click on Login. Authenticate yourself through your Google Account. <br>
-Then click on the blue button at the center of the page. <br>
+Click on Login. Sign In through your Google Account. <br>
+Click on the blue button at the center of the page. <br>
 Each click is equivalent to an 8oz glass of water. <br>
 Your data is stored in a real-time database on the Mongo servers. <br>
 
