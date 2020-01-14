@@ -54,6 +54,10 @@ var port = process.env.PORT || 3001;
 
 app.use('/api', routes);
 
+app.use(function(req, res) {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
+
 app.listen(port, function() {
   console.log("Listening on PORT " + port);
 });
