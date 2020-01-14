@@ -108,7 +108,17 @@ class Counter extends React.Component {
 
         <br></br>
         <br></br>
-        {"8 clicks or more? Good job! Your body is well hydrated"}
+
+        <p
+          style={{
+            color: "white",
+            position: "relative",
+            textAlign: "center",
+            top: "100%"
+          }}
+        >
+          "8 clicks or more? Good job! You are well hydrated"
+        </p>
       </>
     );
   }

@@ -5,16 +5,13 @@ import Counter from "../counter/counter";
 import Axios from "axios";
 import ImageStyle from "./Main.css";
 
-// const divStyle = {
-//   color: "white",
-//   background: "light-blue",
-//   width: "250px",
-//   height: "250px",
-//   fontSize: "50px"
-// };
+const divStyle = {
+  opacity: "60%"
+};
 
 const button = {
-  borderRadius: "100%"
+  borderRadius: "100%",
+  color: "blue"
 };
 class Main extends React.Component {
   componentDidMount() {
@@ -35,6 +32,14 @@ class Main extends React.Component {
           clientId="1041063470172-6gmdhalej085etcuqvfqic9mprf5veuq.apps.googleusercontent.com"
           render={renderProps => (
             <button
+              style={{
+                color: "white",
+                backgroundColor: "deepskyblue",
+                borderColor: "deepskyblue",
+                borderRadius: "10%",
+                left: "50%",
+                bottom: "50%"
+              }}
               onClick={renderProps.onClick}
               disabled={renderProps.disabled}
             >
@@ -47,54 +52,64 @@ class Main extends React.Component {
           cookiePolicy={"single_host_origin"}
         />
 
-        <div style={button}>
-          <GoogleLogout
-            clientId="1041063470172-6gmdhalej085etcuqvfqic9mprf5veuq.apps.googleusercontent.com"
-            render={renderProps => (
-              <button onClick={renderProps.onClick}>Log out</button>
-            )}
-            buttonText="Logout"
-            onLogoutSuccess={responseGoogle}
-          ></GoogleLogout>
-        </div>
+        <GoogleLogout
+          clientId="1041063470172-6gmdhalej085etcuqvfqic9mprf5veuq.apps.googleusercontent.com"
+          render={renderProps => (
+            <div style={button}>
+              <button
+                style={{
+                  color: "white",
+                  backgroundColor: "deepskyblue",
+                  borderColor: "deepskyblue",
+                  borderRadius: "10%"
+                }}
+                onClick={renderProps.onClick}
+              >
+                Log out
+              </button>{" "}
+            </div>
+          )}
+          buttonText="Logout"
+          onLogoutSuccess={responseGoogle}
+        ></GoogleLogout>
         <Counter></Counter>
-        {/* <div style={divStyle}> */}
-        <div className="row1">
-          <div className="column1">
-            <img
-              src={process.env.PUBLIC_URL + "/water1.jpg"}
-              alt={"water"}
-              className="img-responsive"
-              height="auto"
-              max-width="100%"
-            />
-          </div>
-        </div>
+        {/* <div style={divStyle}>
+          <div className="row1">
+            <div className="column1">
+              <img
+                src={process.env.PUBLIC_URL + "/water1.png"}
+                alt={"water1"}
+                className="img-responsive1"
+                // height="auto"
+                // max-width="100%"
+              />
+            </div>
+          </div> */}
         <br></br>
-        <div className="row2">
-          <div className="column2">
-            <img
-              src={process.env.PUBLIC_URL + "/water2.jpg"}
-              alt={"water"}
-              className="img-responsive"
-              height="auto"
-              max-width="100%"
-            />
+        {/* <div className="row2">
+            <div className="column2">
+              <img
+                src={process.env.PUBLIC_URL + "/water2.jpg"}
+                alt={"water2"}
+                className="img-responsive2"
+                // height="auto"
+                // max-width="100%"
+              />
+            </div>
           </div>
-        </div>
-        <br></br>
-        <div className="row3">
-          <div className="column3">
-            <img
-              src={process.env.PUBLIC_URL + "/water3.jpg"}
-              alt={"water"}
-              className="img-responsive"
-              height="auto"
-              max-width="100%"
-            />
+          <br></br> */}
+        {/* <div className="row3">
+            <div className="column3">
+              <img
+                src={process.env.PUBLIC_URL + "/water3.jpg"}
+                alt={"water3"}
+                className="img-responsive3"
+                // height="auto"
+                // max-width="100%"
+              />
+            </div>
           </div>
-        </div>
-        <br></br>
+          <br></br> */}
         {/* </div> */}
       </>
     );

@@ -3,42 +3,57 @@
   display: flex;
   -ms-flex-wrap: wrap; /* IE10 */
   flex-wrap: wrap;
-  padding: 0 10%;
+  /* padding: 0 10px; */
+  float: left;
 }
-.row2 {
-  display: -ms-flexbox; /* IE10 */
+/* .row2 {
+  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 4% 70%;
-}
-.row3 {
-  display: -ms-flexbox; /* IE10 */
+} */
+/* .row3 {
+  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding: 4% 10%;
-}
+  padding: 4% 10%; */
+/* } */
 .column1 {
-  -ms-flex: 25%; /* IE10 */
+  -ms-flex: 25%;
   flex: 25%;
   max-width: 50%;
-  padding: 0 10px;
 }
-.column2 {
-  -ms-flex: 25%; /* IE10 */
+/* .column2 {
+  -ms-flex: 25%;
   flex: 25%;
   max-width: 50%;
   padding: 0 20px;
-}
-.column3 {
-  -ms-flex: 25%; /* IE10 */
+} */
+/* .column3 {
+  -ms-flex: 25%;
   flex: 25%;
   max-width: 50%;
-  padding: 0 100px;
-}
+  padding: 0% 100px;
+} */
 @media screen and (max-width: 800px) {
   .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .img-responsive1 {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+    /* opacity: 50%; */
+  }
+}
+@media screen and (max-width: 800px) {
+  .img-responsive3 {
     -ms-flex: 50%;
     flex: 50%;
     max-width: 50%;
