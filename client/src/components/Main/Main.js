@@ -38,7 +38,7 @@ class Main extends React.Component {
                 backgroundColor: "deepskyblue",
                 borderColor: "deepskyblue",
                 borderRadius: "10%",
-                marginLeft: "2%"
+                marginLeft: "0%"
               }}
               onClick={renderProps.onClick}
               disabled={renderProps.disabled}
