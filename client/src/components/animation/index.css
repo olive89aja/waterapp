@@ -1,6 +1,9 @@
 body {
   overflow: hidden;
-  background: rgb(25, 35, 125);
+  background: darkblue;
+  background-repeat: no-repeat;
+  /* background-image: url(water1.png); */
+  /* background-color: #cccccc; */
 }
 
 div.drop-container {
@@ -62,7 +65,7 @@ h1 {
 
   opacity: 5;
 
-  animation: appear 2s 2.5s forwards;
+  animation: appear 1s 2.5s forwards;
 }
 
 @keyframes appear {
@@ -99,7 +102,7 @@ div.drop-container:after {
 
   border: 5px solid skyblue;
 
-  animation: dripple 2s ease-out 1s;
+  animation: dripple 1s ease-out 1s;
 }
 
 div.drop-container:after {
