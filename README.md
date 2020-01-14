@@ -20,12 +20,12 @@ Olivier Auberger: Back end. Javascript, counter, authentication, MongoDB and Mon
 
 Prerequesite: you need a Google account to login to this website. 
 
-Our website: https://blooming-refuge-48832.herokuapp.com/
+  - Our website: https://blooming-refuge-48832.herokuapp.com/
 
-Click on Login. Sign In through your Google Account. <br>
-Click on the blue button at the center of the page. <br>
-Each click is equivalent to an 8oz glass of water. <br>
-Your data is stored in a real-time database on the Mongo servers. <br>
+- Click on Login. Sign In through your Google Account. <br>
+- Click on the blue button at the center of the page. <br>
+- Each click is equivalent to an 8oz glass of water. <br>
+- Your data is stored in a real-time database on the Mongo servers. <br>
 
 ## Future Improvements
 In the next version of this app we would:
