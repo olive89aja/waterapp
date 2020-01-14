@@ -1,7 +1,6 @@
 import React from "react";
 import Axios from "axios";
 
-
 const counterStyle = {
   color: "white",
   size: "xx-large",
@@ -58,7 +57,7 @@ class Counter extends React.Component {
   }
 
   handleIncrement = () => {
-    console.log('are we handling this')
+    console.log("are we handling this");
     this.setState(
       state => {
         return {
@@ -69,11 +68,12 @@ class Counter extends React.Component {
         // Axios.post("/api/counter", { clicks: this.state.value }).then(data =>
         //   console.log(data)
         // );
-        var author=localStorage.getItem("username");
-        var clicks=localStorage.getItem("Clicks");
+        var author = localStorage.getItem("username");
+        var clicks = localStorage.getItem("Clicks");
 
-        Axios.post("/api/nick", {author, clicks}).then(data => console.log(data));
-
+        Axios.post("/api/nick", { author, clicks }).then(data =>
+          console.log(data)
+        );
       }
     );
   };
