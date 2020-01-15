@@ -30,7 +30,6 @@ Prerequesite: you need a Google account to login to this website.
 ## Future Improvements
 In the next version of this app we would:
 
-- Increase the loading speed of the page.
 - Use moment.js to store more events in the database.
 - Connect to a calendar to provide daily, weekly, monthly reports. 
 - Take more input from users (weight...).
