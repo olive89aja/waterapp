@@ -47,7 +47,7 @@
     "react-jss": "^10.0.3",
     "react-native-viewport-units": "0.0.5",
     "react-server-example": "^1.4.0",
-    "yarn": "^1.21.1"
+    "yarn": "^1.22.0"
   },
   "devDependencies": {
     "eslint-plugin-jsx-a11y": "^6.2.3"
